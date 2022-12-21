@@ -19,6 +19,7 @@ Override the bundle configuration in your ``config_test.yml`` :
     lexik_jwt_authentication:
         secret_key: '%kernel.project_dir%/config/jwt/private-test.pem'
         public_key: '%kernel.project_dir%/config/jwt/public-test.pem'
+        pass_phrase: '%env(JWT_PASSPHRASE)%'
 
 **Protip:** You might want to commit those keys if you intend to run
 your test on a CI server.
